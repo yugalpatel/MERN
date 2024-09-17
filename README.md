@@ -1,61 +1,100 @@
 # MERN Note App
 
-Note app built with MERN stack. Currently WIP.
+## Overview
 
-App's design is a clone of https://www.notion.so/.
+The MERN Note App is a dynamic and user-friendly note-taking application inspired by Notion, designed to offer a seamless and distraction-free note-taking experience. This project serves as an exploration into building scalable software systems with a focus on minimalistic UI and robust backend architecture. By studying and replicating features from established platforms like Notion, this project aims to provide essential note-taking functionalities while demonstrating key software engineering principles.
 
 ## App Preview
 
 https://github.com/jp-quintana/mern-note-app/assets/87621233/10b92abc-03c0-4932-a213-aa3b375f3c80
 
-## Features
+## Motivation
 
-- Create, Edit, Duplicate and Delete notes.
-- Basic note customization.
-- Note list reorder.
-- Basic JWT auth.
-- DAO layer setup in server.
+In the pursuit of understanding large-scale software development, this project draws inspiration from Notion to build a note-taking application with a clean and intuitive interface. The goal is to create a minimalistic user experience that enhances productivity and allows users to focus solely on their notes without unnecessary distractions. This project also provides an opportunity to implement and integrate various technologies and methodologies in a practical setting.
 
-## Future additions
+## Project Features
 
-Check issues tab.
+- **Create, Edit, Duplicate, and Delete Notes:** Users can manage their notes efficiently with CRUD (Create, Read, Update, Delete) operations.
+- **Basic Note Customization:** Notes can be customized with basic formatting options to suit individual preferences.
+- **Note List Reorder:** Users can easily reorder their list of notes to better organize their content.
+- **Basic JWT Authentication:** Secure access to the application with JSON Web Token (JWT) authentication.
+- **DAO Layer Setup:** A well-defined Data Access Object (DAO) layer is set up on the server to manage database interactions and maintain a clean separation of concerns.
 
-## Installation
+## Instructions to Run Locally
 
-- Step 1: Clone Repository and Install Packages.
+1. **Clone the Repository**
 
-```
-git clone https://github.com/jp-quintana/mern-note-app.git
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/MERN-Note-App.git
+   ```
 
-npm i
+2. **Navigate to the Project Directory**
 
-npm run setup
+   ```bash
+   cd MERN-Note-App
+   ```
 
-```
+3. **Install Dependencies**
 
-- Step 2: Set Up a MongoDB Cluster.
+   - For the server:
+     ```bash
+     cd server
+     npm install
+     ```
 
-- Step 3: Create .env file and add in server directory.
+   - For the client:
+     ```bash
+     cd ../client
+     npm install
+     ```
 
-```
-MONGO_URI="Cluster connection string. Can not be left empty."
-PORT="Default is 8080 if left empty."
-DAO_OPTION="Currently MONGOOSE is only option available. It is also the default option if left empty."
-JWT_SECRET="Can not be left empty."
-```
+4. **Set Up Environment Variables**
 
-- Step 4: Create .env.local file and add in client directory.
+   Create a `.env` file in both the `server` and `client` directories with the following content:
 
-```
-VITE_API_URL='http://localhost:8080'
-```
+   **Server `.env` file:**
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   PORT=8080
+   JWT_SECRET=your_jwt_secret_key
+   ```
 
-- Step 5: Start the development server.
+   **Client `.env` file:**
+   ```
+   REACT_APP_API_URL=http://localhost:8080
+   ```
 
-```
-npm run dev
-```
+5. **Start the Server**
 
+   ```bash
+   cd server
+   npm start
+   ```
 
+6. **Start the Client**
 
+   ```bash
+   cd ../client
+   npm start
+   ```
 
+   Open your browser and navigate to `http://localhost:3000` to use the application.
+
+## Technologies Used
+
+- **Frontend:**
+  - React
+  - React Router
+  - Axios
+
+- **Backend:**
+  - Node.js
+  - Express
+  - MongoDB
+  - Mongoose
+  - JSON Web Token (JWT)
+
+- **Tools and Libraries:**
+  - Babel
+  - Webpack
+  - Nodemon
