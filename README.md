@@ -1,4 +1,4 @@
-# MERN Note App
+# MERN Note-taking App
 
 ## Overview
 
